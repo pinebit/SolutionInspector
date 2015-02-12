@@ -14,7 +14,7 @@ You may place *Settings.SolutionCop* files along with your project files.
 The settings in such files will override the Solution-wide settings.
 
 # Settings.SolutionCop file example
-```
+``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
