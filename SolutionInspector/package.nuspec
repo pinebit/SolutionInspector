@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SolutionInspector</id>
+    <version>1.0.0</version>
+    <authors>Andrei Smirnov</authors>
+    <owners>Andrei Smirnov</owners>
+    <licenseUrl>https://github.com/pinebit/SolutionInspector/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/pinebit/SolutionInspector</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Visual Studio solution structure and settings validator.</description>
+    <releaseNotes>Visual Studio solution structure and settings validator.</releaseNotes>
+    <copyright>Copyright (c) Andrei Smirnov 2015</copyright>
+    <tags>solution structure project settings validation checking stylecop fxcop</tags>
+  </metadata>
+</package>
