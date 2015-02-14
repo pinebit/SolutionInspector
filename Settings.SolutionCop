@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <RequireEnablePackagesRestore>false</RequireEnablePackagesRestore>
-  <RequireOneVersionForSamePackages>true</RequireOneVersionForSamePackages>
-  <RequireTreatWarningsAsErrorsToBeTrue>true</RequireTreatWarningsAsErrorsToBeTrue>
-  <RequireStyleCopTreatErrorsAsWarningsToBeFalse>false</RequireStyleCopTreatErrorsAsWarningsToBeFalse>
-  <AllowMissingFiles>false</AllowMissingFiles>
-  <ExcludedProjects />
-</Settings>

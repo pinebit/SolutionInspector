@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- This configuration file is an examlpe -->
+  
+  <SolutionSettings>
+    <MinSolutionFormatVersion>12.00</MinSolutionFormatVersion>
+    <MaxSolutionFormatVersion>12.00</MaxSolutionFormatVersion>
+    <DetectMissingFiles>true</DetectMissingFiles>
+    <ProjectNamePrefix>MyCompany.MyProduct.</ProjectNamePrefix>
+    <ProjectNameIsFileName>true</ProjectNameIsFileName>
+    <IgnoredProjects>
+      AVerySpecialProject1;
+      AVerySpecialProject2;
+    </IgnoredProjects>
+  </SolutionSettings>
+
+  <ProjectSettings>
+    <DetectMissingFiles>true</DetectMissingFiles>
+    <AllowBuildEvents>true</AllowBuildEvents>
+    <AssemblyNameIsProjectName>true</AssemblyNameIsProjectName>
+    <RootNamespaceIsAssemblyName>true</RootNamespaceIsAssemblyName>
+    <RequiredImports>StyleCop.MSBuild.Targets</RequiredImports>
+    <Properties>
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+      <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
+    </Properties>
+  </ProjectSettings>
+
+</Settings>
