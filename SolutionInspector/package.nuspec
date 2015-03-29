@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SolutionInspector</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Andrei Smirnov</authors>
     <owners>Andrei Smirnov</owners>
     <licenseUrl>https://github.com/pinebit/SolutionInspector/blob/master/LICENSE</licenseUrl>
@@ -13,4 +13,7 @@
     <copyright>Copyright (c) Andrei Smirnov 2015</copyright>
     <tags>solution structure project settings validation checking stylecop fxcop</tags>
   </metadata>
+  <files>
+    <file src="bin\Release\SolutionInspector.exe" target="bin" />
+  </files>
 </package>
