@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Solution Inspector by pinebit</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Solution Inspector</h1>
+        <p>Visual Studio solution structure and settings validator</p>
+
+        <p class="view"><a href="https://github.com/pinebit/SolutionInspector">View the Project on GitHub <small>pinebit/SolutionInspector</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/pinebit/SolutionInspector/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/pinebit/SolutionInspector/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/pinebit/SolutionInspector">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="solutioninspector" class="anchor" href="#solutioninspector" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SolutionInspector</h1>
+
+<p>Visual Studio solution structure and settings validator.
+The tool checks for solution and project files to be consistent as well as project settings to match the designated values.</p>
+
+<h1>
+<a id="running-the-tool" class="anchor" href="#running-the-tool" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running the tool</h1>
+
+<p>SolutionInspector.exe YourMasterPiece.sln</p>
+
+<h2>
+<a id="solution-wide-validation-settings" class="anchor" href="#solution-wide-validation-settings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution-wide validation settings</h2>
+
+<p>The tool will use the default validation settings unless you place <em>SolutionInspector.xml</em> file along with the solution file.
+You basically do the same for StyleCop or ReSharper settings.</p>
+
+<h2>
+<a id="project-specific-settings" class="anchor" href="#project-specific-settings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project-specific settings</h2>
+
+<p>You may place <em>SolutionInspector.xml</em> files along with your project files.
+The settings in such files will override the Solution-wide settings.</p>
+
+<h1>
+<a id="solutioninspectorxml-file-example" class="anchor" href="#solutioninspectorxml-file-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SolutionInspector.xml file example</h1>
+
+<div class="highlight highlight-text-xml"><pre>&lt;?<span class="pl-ent">xml</span><span class="pl-e"> version</span>=<span class="pl-s"><span class="pl-pds">"</span>1.0<span class="pl-pds">"</span></span><span class="pl-e"> encoding</span>=<span class="pl-s"><span class="pl-pds">"</span>utf-8<span class="pl-pds">"</span></span>?&gt;
+&lt;<span class="pl-ent">Settings</span> <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">xsi</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="pl-pds">"</span></span> <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">xsd</span>=<span class="pl-s"><span class="pl-pds">"</span>http://www.w3.org/2001/XMLSchema<span class="pl-pds">"</span></span>&gt;
+
+    &lt;<span class="pl-ent">SolutionSettings</span>&gt;
+        &lt;<span class="pl-ent">MinSolutionFormatVersion</span>&gt;12.00&lt;/<span class="pl-ent">MinSolutionFormatVersion</span>&gt;
+        &lt;<span class="pl-ent">MaxSolutionFormatVersion</span>&gt;12.00&lt;/<span class="pl-ent">MaxSolutionFormatVersion</span>&gt;
+        &lt;<span class="pl-ent">DetectMissingFiles</span>&gt;true&lt;/<span class="pl-ent">DetectMissingFiles</span>&gt;
+        &lt;<span class="pl-ent">ProjectNamePrefix</span>&gt;MyCompany.MyProduct.&lt;/<span class="pl-ent">ProjectNamePrefix</span>&gt;
+        &lt;<span class="pl-ent">ProjectNameIsFileName</span>&gt;true&lt;/<span class="pl-ent">ProjectNameIsFileName</span>&gt;
+        &lt;<span class="pl-ent">IgnoredProjects</span>&gt;
+            AVerySpecialProject1;
+            AVerySpecialProject2;
+        &lt;/<span class="pl-ent">IgnoredProjects</span>&gt;
+    &lt;/<span class="pl-ent">SolutionSettings</span>&gt;
+
+    &lt;<span class="pl-ent">ProjectSettings</span>&gt;
+        &lt;<span class="pl-ent">DetectMissingFiles</span>&gt;true&lt;/<span class="pl-ent">DetectMissingFiles</span>&gt;
+        &lt;<span class="pl-ent">AllowBuildEvents</span>&gt;true&lt;/<span class="pl-ent">AllowBuildEvents</span>&gt;
+        &lt;<span class="pl-ent">AssemblyNameIsProjectName</span>&gt;true&lt;/<span class="pl-ent">AssemblyNameIsProjectName</span>&gt;
+        &lt;<span class="pl-ent">RootNamespaceIsAssemblyName</span>&gt;true&lt;/<span class="pl-ent">RootNamespaceIsAssemblyName</span>&gt;
+        &lt;<span class="pl-ent">RequiredImports</span>&gt;StyleCop.MSBuild.Targets&lt;/<span class="pl-ent">RequiredImports</span>&gt;
+        &lt;<span class="pl-ent">Properties</span>&gt;
+            &lt;<span class="pl-ent">TreatWarningsAsErrors</span>&gt;true&lt;/<span class="pl-ent">TreatWarningsAsErrors</span>&gt;
+            &lt;<span class="pl-ent">StyleCopTreatErrorsAsWarnings</span>&gt;false&lt;/<span class="pl-ent">StyleCopTreatErrorsAsWarnings</span>&gt;
+        &lt;/<span class="pl-ent">Properties</span>&gt;
+    &lt;/<span class="pl-ent">ProjectSettings</span>&gt;
+
+&lt;/<span class="pl-ent">Settings</span>&gt;</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/pinebit">pinebit</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
