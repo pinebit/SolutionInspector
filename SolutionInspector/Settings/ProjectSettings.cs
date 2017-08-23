@@ -6,6 +6,16 @@ namespace SolutionInspector.Settings
 {
     internal class ProjectSettings : IProjectSettings
     {
+        public ProjectSettings()
+        {
+            DetectMissingFiles = true;
+            AllowBuildEvents = true;
+            AssemblyNameIsProjectName = true;
+            RootNamespaceIsAssemblyName = false;
+            RequiredImports = new List<string>();
+            Properties = new List<IProjectProperty>();
+        }
+
         public ProjectSettings(
             bool? detectMissingFiles,
             bool? allowBuildEvents,
