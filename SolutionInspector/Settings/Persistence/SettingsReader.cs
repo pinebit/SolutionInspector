@@ -38,7 +38,7 @@ namespace SolutionInspector.Settings.Persistence
                 }
             }
 
-            return null;
+            return new ProjectSettings();
         }
     }
 }

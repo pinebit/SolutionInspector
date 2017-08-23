@@ -11,7 +11,7 @@ namespace SolutionInspector.Rules
         {
             foreach (IProject project in solution.Projects)
             {
-                if (project.Settings.Properties == null)
+                if (project.Settings.Properties == null || project.Settings.Properties.Count() == 0)
                 {
                     continue;
                 }

@@ -57,7 +57,9 @@ namespace SolutionInspector.Model.Persistence
             IProjectSettings projectSettings,
             ICollection<string> files)
         {
-            HashSet<string> ignoreSet = new HashSet<string>(ignoredProjects);
+            HashSet<string> ignoreSet = new HashSet<string>();
+            if (ignoredProjects != null)
+                ignoreSet.SetEquals(ignoredProjects);
             Context context = Context.None;
 
             foreach (string line in lines)
